@@ -1,0 +1,6 @@
+{
+  "name": "Horizon Labs",
+  "description": "Propuesta de servicio - Agentes de IA en tu operación sobre una capa de contexto propia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
