@@ -17,31 +17,42 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
       <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-neutral-100/70 -translate-x-1/2 pointer-events-none hidden lg:block" />
 
       <div className="relative z-10 max-w-5xl mx-auto w-full my-auto flex flex-col items-center text-center">
+        {/* Brand eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-[12px] font-mono-code uppercase tracking-[0.32em] text-[#E10600] font-semibold mb-6"
+        >
+          sustrato
+        </motion.p>
+
         {/* H1 Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl font-bold tracking-tight leading-[1.06] mb-8"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl font-bold tracking-tight leading-[1.06] mb-8 text-[#111111]"
         >
-          <span className="text-[#111111]">Agentes de </span>
-          <span className="text-[#D92D20]">IA</span>
-          <br />
-          <span className="text-[#111111]">y </span>
-          <span className="text-[#3F3F46]">Automatizaciones</span>
-          <br />
-          <span className="text-[#111111]">para tu </span>
-          <span className="text-[#D92D20]">operación.</span>
+          Donde los agentes <span className="text-[#D92D20]">viven</span>,
+          <br className="hidden sm:block" /> <span className="text-[#D92D20]">actúan</span> y{' '}
+          <span className="text-[#D92D20]">entienden</span>
+          <br className="hidden sm:block" /> de tu operación.
         </motion.h1>
 
-        {/* Subtitle */}
+        {/* Lede */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-2xl text-lg sm:text-2xl text-neutral-600 font-normal leading-relaxed mb-10"
+          className="max-w-3xl text-base sm:text-xl text-neutral-600 font-normal leading-relaxed mb-10"
         >
-          Automatizamos tu operación con agentes de IA impulsados por tu contexto.
+          <span className="text-neutral-900 font-medium">
+            Un agente solo no llega a tu empresa.
+          </span>{' '}
+          Necesita de dónde leer, sobre qué actuar y dónde integrarse. Construimos esa capa dentro de
+          tu operación: la información de tu empresa, tus herramientas conectadas, tus criterios, la
+          trazabilidad de lo que hacen. Sobre ella dejamos los agentes funcionando.
         </motion.p>
 
         {/* Actions */}
@@ -61,10 +72,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
           </button>
 
           <a
-            href="#servicio"
+            href="#sustrato"
             className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium text-neutral-600 hover:text-black transition-colors"
           >
-            <span>Explorar el servicio</span>
+            <span>Ver cómo funciona</span>
             <ArrowDown className="w-4 h-4 animate-bounce text-neutral-400" />
           </a>
         </motion.div>
