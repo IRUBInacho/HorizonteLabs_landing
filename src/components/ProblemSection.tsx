@@ -23,7 +23,7 @@ export const ProblemSection: React.FC = () => {
   return (
     <section
       id="problema"
-      className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-[#F7F7F9] border-t border-b border-neutral-200 relative overflow-hidden"
+      className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-neutral-100 border-t border-b border-neutral-200 relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto relative z-10">
 

@@ -22,9 +22,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl font-bold tracking-tight text-[#111111] leading-[1.06] mb-8"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl font-bold tracking-tight leading-[1.06] mb-8"
         >
-          Agentes de IA y Automatizaciones para tu operación.
+          <span className="text-[#111111]">Agentes de </span>
+          <span className="text-[#D92D20]">IA</span>
+          <br />
+          <span className="text-[#111111]">y </span>
+          <span className="text-[#3F3F46]">Automatizaciones</span>
+          <br />
+          <span className="text-[#111111]">para tu </span>
+          <span className="text-[#D92D20]">operación.</span>
         </motion.h1>
 
         {/* Subtitle */}

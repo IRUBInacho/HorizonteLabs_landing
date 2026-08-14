@@ -90,7 +90,7 @@ export const BentoGrid: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative bg-white rounded-2xl p-8 sm:p-12 lg:p-14 border border-neutral-200 hover:border-[#E10600] transition-colors duration-500 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+              className="group relative bg-[#1A365D]/[0.03] backdrop-blur-sm rounded-2xl p-8 sm:p-12 lg:p-14 border border-[#1A365D]/10 hover:border-[#E10600]/40 hover:bg-[#1A365D]/[0.05] transition-colors duration-500 shadow-sm"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                 {/* Left Column: Text & Hierarchy (7 cols) */}
@@ -100,7 +100,7 @@ export const BentoGrid: React.FC = () => {
                     <span className="text-xs font-mono-code uppercase tracking-widest text-[#E10600] font-semibold">
                       {service.step} · {service.title}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono-code font-medium bg-neutral-100 text-neutral-800 border border-neutral-200 group-hover:border-[#E10600]/30 group-hover:bg-[#E10600]/5 transition-colors">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono-code font-medium bg-[#1A365D]/5 text-neutral-800 border border-[#1A365D]/10 group-hover:border-[#E10600]/30 group-hover:bg-[#E10600]/5 transition-colors">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#E10600]" />
                       {service.tag}
                     </span>
