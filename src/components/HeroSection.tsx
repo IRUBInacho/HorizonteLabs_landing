@@ -24,7 +24,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-[#111111] leading-[1.06] mb-8"
         >
-          Agentes de IA en tu operación.
+          Agentes de IA, Automatizaciones y Capa de Contexto en tu operación.
         </motion.h1>
 
         {/* Subtitle */}
@@ -34,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
           transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl text-lg sm:text-xl text-neutral-600 font-normal leading-relaxed mb-10"
         >
-          Integramos agentes al trabajo diario de tu empresa, sobre una capa de contexto propia: tu información y tus criterios, accesibles para los agentes.
+          Automatizamos tu operación con agentes de IA impulsados por tu contexto.
         </motion.p>
 
         {/* Actions */}
