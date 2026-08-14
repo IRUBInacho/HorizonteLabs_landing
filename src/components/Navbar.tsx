@@ -25,11 +25,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
         {/* Brand */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E10600] animate-rosso-pulse" />
-          <span className="text-sm font-semibold tracking-[0.2em] uppercase font-mono-code text-black group-hover:text-[#E10600] transition-colors">
-            HORIZONTE LABS
-          </span>
+        <a href="#" className="flex items-center group">
+          <div className="bg-[#0A0A0A]/90 backdrop-blur-sm px-4 py-2.5 rounded-xl border border-neutral-800 shadow-sm transition-transform duration-300 group-hover:bg-[#0A0A0A]">
+            <img
+              src="/hl_concept_1_neural_transparent_cropped.png"
+              alt="Horizonte Labs Logo"
+              className="h-10 sm:h-12 object-contain"
+            />
+          </div>
         </a>
 
         {/* Navigation Links */}
