@@ -12,6 +12,7 @@ import { ContextLayerDiagram } from './components/ContextLayerDiagram';
 import { ResultsSection } from './components/ResultsSection';
 import { CTASection } from './components/CTASection';
 import { ConsultationModal } from './components/ConsultationModal';
+import { TeamSection } from './components/TeamSection';
 
 export default function App() {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
@@ -45,6 +46,9 @@ export default function App() {
 
         {/* 4. Resultados (Split Layout 50/50) */}
         <ResultsSection />
+
+        {/* 4.5. El Equipo (Perfiles) */}
+        <TeamSection />
 
         {/* 5. CTA y Cierre (Conversión sin fricción) */}
         <CTASection onOpenConsultation={handleOpenConsultation} />
