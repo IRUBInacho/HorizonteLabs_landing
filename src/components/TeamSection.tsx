@@ -1,16 +1,18 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Linkedin, ArrowRight } from 'lucide-react';
 
 const teamMembers = [
   {
     id: 'francisco',
     name: 'Francisco Andrades Martínez',
-    role: 'Senior Data Scientist & ML Engineer',
+    role: 'Senior AI & ML Engineer',
     expertise: ['AI', 'Machine Learning', 'Data Science', 'Autonomous Agents'],
-    bio: 'Ingeniero Civil en Informática con profunda especialización en Inteligencia Artificial y agentes autónomos. Lidera el desarrollo de modelos predictivos, sistemas de razonamiento automatizado y arquitecturas de datos complejas que permiten a las empresas operar con inteligencia de nivel superior.',
+    bio: 'Ingeniero Civil en Informática especializado en inteligencia artificial aplicada y agentes autónomos. Lidera el desarrollo de modelos predictivos, sistemas de razonamiento automatizado y arquitecturas de datos en producción. Forma a ingenieros de software senior de Latinoamérica en ML engineering y sistemas agénticos, y cuenta con investigación publicada en el área. Experiencia en startups y en programas de aceleración e inmersión hacia US.',
     linkedin: 'https://www.linkedin.com/in/francisco-andrades-mart%C3%ADnez-29b6101ab/',
-    image: '/team/fotofrancisco.png'
+    image: '/team/francisco.jpeg',
+    // Retrato cuadrado en contenedor panorámico: subir el encuadre evita cortar el pelo.
+    imagePosition: 'center 25%'
   },
   {
     id: 'ignacio',
@@ -43,7 +45,7 @@ export const TeamSection: React.FC = () => {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#E10600] animate-pulse" />
             <span className="text-xs font-mono-code uppercase tracking-[0.2em] text-neutral-500 font-medium">
-              El equipo
+              Quiénes somos
             </span>
           </motion.div>
 
@@ -55,7 +57,7 @@ export const TeamSection: React.FC = () => {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] max-w-4xl leading-[1.1]"
           >
             Las personas detrás de <br className="hidden sm:block" />
-            <span className="text-neutral-400">HorizonteLabs.</span>
+            <span className="text-neutral-400">sustrato.</span>
           </motion.h2>
           
           <motion.p
@@ -69,10 +71,10 @@ export const TeamSection: React.FC = () => {
           </motion.p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        {/* Team: ambos perfiles con el mismo peso */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
           {teamMembers.map((member, index) => (
-            <motion.div 
+            <motion.div
               key={member.id}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,18 +82,18 @@ export const TeamSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.15 * index, ease: [0.16, 1, 0.3, 1] }}
               className="group flex flex-col"
             >
-              {/* Actual Image with Hover effect */}
-              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-neutral-100 rounded-2xl overflow-hidden mb-8 border border-neutral-200/70 shadow-sm group-hover:shadow-lg transition-shadow duration-500">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale hover:grayscale-0"
+              {/* Portrait */}
+              <div className="relative w-full max-w-sm aspect-[4/3] bg-neutral-100 rounded-2xl overflow-hidden mb-8 border border-neutral-200/70 shadow-sm group-hover:shadow-lg transition-shadow duration-500">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  style={{ objectPosition: member.imagePosition }}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
                 />
               </div>
 
-              {/* Header Info */}
               <div className="mb-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-2 tracking-tight group-hover:text-[#E10600] transition-colors duration-300">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-2 tracking-tight leading-tight group-hover:text-[#E10600] transition-colors duration-300">
                   {member.name}
                 </h3>
                 <p className="text-[13px] font-mono-code text-neutral-500 uppercase tracking-widest font-medium">
@@ -99,17 +101,14 @@ export const TeamSection: React.FC = () => {
                 </p>
               </div>
 
-              {/* Bio */}
               <p className="text-base text-neutral-600 leading-relaxed mb-8 flex-grow">
                 {member.bio}
               </p>
 
-              {/* Footer (Tags & LinkedIn) */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-neutral-200/80 mt-auto">
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {member.expertise.map((tag) => (
-                    <span 
+                    <span
                       key={tag}
                       className="px-2.5 py-1 bg-neutral-50 border border-neutral-200 rounded text-[10px] font-mono-code font-medium text-neutral-600 uppercase tracking-wider"
                     >
@@ -118,8 +117,7 @@ export const TeamSection: React.FC = () => {
                   ))}
                 </div>
 
-                {/* LinkedIn Link */}
-                <a 
+                <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"

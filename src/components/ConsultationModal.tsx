@@ -233,7 +233,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 <div className="p-4 bg-[#F9F9F9] border border-neutral-200 rounded-lg text-left max-w-sm mx-auto mb-6 text-xs text-neutral-600 font-mono-code space-y-1">
                   <div className="flex items-center gap-1.5 text-black font-semibold">
                     <Sparkles className="w-3.5 h-3.5 text-[#E10600]" />
-                    <span>Preparación Horizon Labs:</span>
+                    <span>Preparación sustrato:</span>
                   </div>
                   <div>• Análisis preliminar de integraciones</div>
                   <div>• Propuesta de primera automatización rápida</div>

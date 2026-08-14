@@ -43,7 +43,7 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenConsultation }) =>
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed font-normal max-w-2xl mx-auto mb-12"
         >
-          Nos reunimos a revisar cómo trabaja tu equipo y definimos la primera automatización. A partir de ahí, el servicio avanza etapa por etapa, junto con los resultados.
+          Nos reunimos a revisar cómo trabaja tu equipo e identificamos sus primeras necesidades. A partir de ahí, el servicio avanza etapa por etapa, junto con los resultados.
         </motion.p>
 
         {/* CTA Button */}
@@ -68,10 +68,10 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenConsultation }) =>
       <div className="max-w-7xl mx-auto mt-24 pt-10 border-t border-neutral-200/80 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-mono-code gap-4">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#E10600]" />
-          <span>Agentes de IA en la operación · Propuesta de servicio</span>
+          <span>Donde los agentes viven, actúan y entienden de tu operación.</span>
         </div>
         <div className="text-neutral-400">
-          HORIZON LABS © {new Date().getFullYear()}
+          SUSTRATO.AI © {new Date().getFullYear()}
         </div>
       </div>
     </section>

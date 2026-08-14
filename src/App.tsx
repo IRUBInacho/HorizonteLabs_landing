@@ -6,10 +6,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { ProblemSection } from './components/ProblemSection';
-import { BentoGrid } from './components/BentoGrid';
-import { ContextLayerDiagram } from './components/ContextLayerDiagram';
-import { ResultsSection } from './components/ResultsSection';
+import { SustratoDiagram } from './components/SustratoDiagram';
 import { CTASection } from './components/CTASection';
 import { ConsultationModal } from './components/ConsultationModal';
 import { TeamSection } from './components/TeamSection';
@@ -32,25 +29,16 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main>
-        {/* 1. Hero Section (La Primera Vista con Red Neuronal Sutil) */}
+        {/* 1. Hero (La propuesta, con red neuronal sutil de fondo) */}
         <HeroSection onOpenConsultation={handleOpenConsultation} />
 
-        {/* 1.5. El Problema (Dolores que resolvemos + Ecuación del Valor) */}
-        <ProblemSection />
+        {/* 2. Sustrato (La capa, en diagrama) */}
+        <SustratoDiagram />
 
-        {/* 2. El Servicio (Bento Grid con micro-animaciones) */}
-        <BentoGrid />
-
-        {/* 3. El Diferenciador (La Capa de Contexto - Split Banner Diagram) */}
-        <ContextLayerDiagram />
-
-        {/* 4. Resultados (Split Layout 50/50) */}
-        <ResultsSection />
-
-        {/* 4.5. El Equipo (Perfiles) */}
+        {/* 3. Quiénes somos (Perfiles) */}
         <TeamSection />
 
-        {/* 5. CTA y Cierre (Conversión sin fricción) */}
+        {/* 4. CTA y Cierre (Conversión sin fricción) */}
         <CTASection onOpenConsultation={handleOpenConsultation} />
       </main>
 

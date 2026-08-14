@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="sustrato">
+  <!-- Versión plana, sin gradientes. La emisión no sobrevive a una sola tinta ni
+       al offset, así que acá el mismo dibujo se resuelve con formas macizas y
+       opacidades. Usar en impresión, fondo de color y sellos. -->
+  <path d="M20.5,19 L27.5,19 L31,32.6 L17,32.6 Z" fill="currentColor" opacity="0.2" />
+  <rect x="2" y="32" width="44" height="3.4" rx="1.7" fill="currentColor" />
+  <rect x="6" y="38.2" width="36" height="1.8" rx="0.9" fill="currentColor" opacity="0.45" />
+  <rect x="11" y="42.2" width="26" height="1.4" rx="0.7" fill="currentColor" opacity="0.25" />
+  <circle cx="24" cy="14" r="8" fill="currentColor" />
+</svg>
