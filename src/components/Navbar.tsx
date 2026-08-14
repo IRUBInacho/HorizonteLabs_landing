@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { SustratoMark } from './SustratoMark';
 
 interface NavbarProps {
   onOpenConsultation: () => void;
@@ -24,13 +25,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
-        {/* Brand wordmark */}
-        <a href="#" className="group flex items-baseline gap-0.5">
-          <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#111111] lowercase">
-            sustrato
-          </span>
-          <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#E10600] transition-opacity duration-300 group-hover:opacity-70">
-            .ai
+        {/* Brand: isotipo de estratos + wordmark */}
+        <a href="#" className="group flex items-center gap-2.5">
+          <SustratoMark
+            idPrefix="nav"
+            className="h-10 w-10 sm:h-11 sm:w-11 shrink-0 text-[#111111]"
+          />
+
+          <span className="flex items-baseline gap-0.5">
+            <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#111111] lowercase">
+              sustrato
+            </span>
+            <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#E10600] transition-opacity duration-300 group-hover:opacity-70">
+              .ai
+            </span>
           </span>
         </a>
 

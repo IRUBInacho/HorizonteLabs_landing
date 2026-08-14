@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="sustrato">
+  <!-- Emisión adaptada a fondo claro: la luz se construye con gradientes radiales
+       y no con brillos blancos, que sobre blanco serían invisibles.
+       El dibujo llena el lienzo a propósito; si el núcleo es chico dentro del
+       viewBox, el símbolo se ve diminuto por más que se agrande el <svg>.
+       Las dos capas inferiores usan currentColor y siguen el color del texto. -->
+  <defs>
+    <radialGradient id="sus-halo">
+      <stop offset="0" stop-color="#FF2A1E" stop-opacity="0.42" />
+      <stop offset="0.5" stop-color="#E10600" stop-opacity="0.15" />
+      <stop offset="1" stop-color="#E10600" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="sus-core" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#FF4A3D" />
+      <stop offset="1" stop-color="#C10500" />
+    </radialGradient>
+    <linearGradient id="sus-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E10600" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#C10500" stop-opacity="1" />
+      <stop offset="1" stop-color="#E10600" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="sus-spill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E10600" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#FF2A1E" stop-opacity="0.38" />
+      <stop offset="1" stop-color="#E10600" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="sus-cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E10600" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#E10600" stop-opacity="0.06" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="24" cy="14" r="16" fill="url(#sus-halo)" />
+  <!-- Haz cónico: el agente proyecta sobre la capa, y la capa lo alimenta. -->
+  <path d="M20.5,19 L27.5,19 L31,32.6 L17,32.6 Z" fill="url(#sus-cone)" />
+  <ellipse cx="24" cy="33.6" rx="23" ry="5.4" fill="url(#sus-spill)" />
+  <rect x="2" y="32" width="44" height="3.4" rx="1.7" fill="url(#sus-beam)" />
+  <rect x="6" y="38.2" width="36" height="1.8" rx="0.9" fill="currentColor" opacity="0.24" />
+  <rect x="11" y="42.2" width="26" height="1.4" rx="0.7" fill="currentColor" opacity="0.12" />
+  <circle cx="24" cy="14" r="8" fill="url(#sus-core)" />
+</svg>

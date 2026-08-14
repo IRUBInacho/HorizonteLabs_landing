@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { SustratoMark } from './SustratoMark';
 
 const consumers = ['Agentes', 'Automatizaciones', 'Software a medida'];
 
@@ -103,6 +104,8 @@ export const SustratoDiagram: React.FC = () => {
 
           {/* The slab */}
           <div className="relative bg-[linear-gradient(160deg,rgba(225,6,0,0.07),rgba(225,6,0,0.02))] border border-[#E10600]/35 rounded-2xl px-6 sm:px-10 py-8 sm:py-10 text-center shadow-[0_20px_48px_-24px_rgba(225,6,0,0.45)]">
+            <SustratoMark idPrefix="slab" className="h-11 w-11 mx-auto mb-2 text-[#111111]" />
+
             <span className="block text-[12px] font-mono-code uppercase tracking-[0.3em] text-[#E10600] font-bold mb-3">
               Sustrato
             </span>

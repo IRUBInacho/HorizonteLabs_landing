@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="sustrato">
+  <!-- Sin fondo: la pestaña se ve a través del icono, en tema claro y oscuro.
+       Por eso todo va en rojo, incluidas las capas secundarias: currentColor
+       en un favicon suelto resuelve a negro y desaparecería en pestaña oscura.
+       Formas más gruesas y una capa menos que en el isotipo, porque a 16px
+       cualquier trazo bajo 1.5 unidades no llega a pintarse. -->
+  <defs>
+    <radialGradient id="fav-halo">
+      <stop offset="0" stop-color="#FF3B2E" stop-opacity="0.4" />
+      <stop offset="0.5" stop-color="#E10600" stop-opacity="0.14" />
+      <stop offset="1" stop-color="#E10600" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="fav-core" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#FF4A3D" />
+      <stop offset="1" stop-color="#C10500" />
+    </radialGradient>
+    <linearGradient id="fav-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E10600" stop-opacity="0.15" />
+      <stop offset="0.5" stop-color="#D40500" stop-opacity="1" />
+      <stop offset="1" stop-color="#E10600" stop-opacity="0.15" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="16" cy="11" r="11" fill="url(#fav-halo)" />
+  <path d="M13.6,15 L18.4,15 L21,22 L11,22 Z" fill="#E10600" opacity="0.22" />
+  <rect x="1.5" y="21.4" width="29" height="2.9" rx="1.45" fill="url(#fav-beam)" />
+  <rect x="6" y="26.4" width="20" height="1.6" rx="0.8" fill="#E10600" opacity="0.4" />
+  <circle cx="16" cy="11" r="6.4" fill="url(#fav-core)" />
+</svg>
