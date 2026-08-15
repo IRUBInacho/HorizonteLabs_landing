@@ -2,30 +2,41 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, Minus } from 'lucide-react';
 import { SustratoMark } from './SustratoMark';
-import { BentoSpecializedAgentVisual } from './visuals/BentoSpecializedAgentVisual';
-import { BentoAutomationVisual } from './visuals/BentoAutomationVisual';
+import { BentoAgentsVisual } from './visuals/BentoAgentsVisual';
 import { BentoCustomSoftwareVisual } from './visuals/BentoCustomSoftwareVisual';
 
-const consumers = [
+interface Consumer {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+  /** Opcional: no todo lo que va sobre el sustrato se explica mejor con un diagrama. */
+  visual?: React.ReactNode;
+}
+
+const consumers: Consumer[] = [
   {
     id: 'Agentes',
     label: 'Agentes',
-    title: 'Agente especializado',
-    description: 'Implementamos un agente capaz de consultar el conocimiento de la empresa —proyectos, informes, criterios técnicos— y responder sobre él con precisión.',
-    visual: <BentoSpecializedAgentVisual />
+    title: 'Agentes',
+    // Los ejemplos viven acá y no en el diagrama: en prosa se leen como ejemplos,
+    // dibujados se leen como el catálogo cerrado de lo que hacemos.
+    description: 'Agentes que trabajan dentro de tu operación, cada uno con su tarea. Puede ser uno que capte lo que entra por el CRM, uno que siga lo que se dice en redes, o uno que el equipo use para resolver el trabajo del día. Todos se apoyan en la misma capa, así que actúan con el criterio de la empresa.',
+    visual: <BentoAgentsVisual />
   },
   {
+    // Sin diagrama: el alcance de las automatizaciones depende de cada operación,
+    // y cualquier intento de dibujarlo terminaba acotándolo a un tipo de resultado.
     id: 'Automatizaciones',
     label: 'Automatizaciones',
     title: 'Automatizaciones',
-    description: 'Flujos que resuelven el trabajo repetitivo. Documentos que preparan solos apoyándose en trabajos anteriores e informes generados desde datos.',
-    visual: <BentoAutomationVisual />
+    description: 'Flujos que resuelven el trabajo repetitivo. Las tareas que hoy dependen de que alguien las recuerde pasan a ejecutarse solas.'
   },
   {
     id: 'Software',
     label: 'Software a medida',
-    title: 'Herramientas diseñadas para operar',
-    description: 'Desarrollamos aplicaciones diseñadas para integrarse con agentes y la capa de contexto: cada herramienta nueva es algo que los agentes pueden usar.',
+    title: 'Software a medida',
+    description: 'Desarrollamos el software que tu operación necesite, como cualquier desarrollo a medida. Y como queda sobre el sustrato, los agentes también pueden usarlo. Es una capacidad que se agrega a lo que la herramienta ya resuelve.',
     visual: <BentoCustomSoftwareVisual />
   }
 ];
@@ -33,6 +44,7 @@ const consumers = [
 /** Categorías, no productos: la lista no debe leerse como el catálogo cerrado de integraciones. */
 const feeds = [
   'Comunicación',
+  'Canales de entrada',
   'Documentos',
   'Datos de la operación',
   'Sistemas internos',
@@ -94,11 +106,11 @@ export const SustratoDiagram: React.FC = () => {
             </p>
 
             <p>
-              Se construye por etapas y cada etapa entrega algo que ya sirve: desde una integración
-              funcionando o un proceso que deja de hacerse a mano, hasta un agente que responde sobre
-              el conocimiento especializado de tu empresa, o software propio diseñado desde el inicio
-              para que los agentes lo operen. Cada etapa deja el sustrato más completo, de modo que lo
-              que viene después es más simple y más potente.
+              Se construye por etapas y cada etapa entrega algo que ya sirve: las integraciones que
+              conectan lo que el equipo ya usa, las automatizaciones que resuelven el trabajo
+              repetitivo, los agentes operando dentro de la empresa y el software a medida que la
+              operación necesite. Cada etapa deja el sustrato más completo, de modo que lo que viene
+              después es más simple y más potente.
             </p>
 
             <p className="text-neutral-900 font-medium border-l-2 border-[#E10600] pl-4">
@@ -157,7 +169,11 @@ export const SustratoDiagram: React.FC = () => {
                 className="overflow-hidden w-full relative z-10"
               >
                 <div className="bg-[#FAFAFA] border border-[#E10600]/30 rounded-2xl rounded-t-none mb-6 sm:mb-8 p-6 sm:p-8 shadow-[0_20px_40px_-15px_rgba(225,6,0,0.15)] relative -top-[1px]">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                  <div
+                    className={`grid grid-cols-1 gap-6 md:gap-8 items-center ${
+                      activeConsumer.visual ? 'md:grid-cols-2' : ''
+                    }`}
+                  >
                     <div className="flex flex-col text-left">
                       <span className="text-[11px] font-mono-code uppercase tracking-widest text-[#E10600] font-semibold mb-3">
                         En Acción
@@ -169,9 +185,11 @@ export const SustratoDiagram: React.FC = () => {
                         {activeConsumer.description}
                       </p>
                     </div>
-                    <div className="w-full">
-                      {activeConsumer.visual}
-                    </div>
+                    {activeConsumer.visual && (
+                      <div className="w-full">
+                        {activeConsumer.visual}
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -216,7 +234,8 @@ export const SustratoDiagram: React.FC = () => {
           </div>
 
           {/* Sources feeding the slab */}
-          <div className="flex flex-wrap justify-center gap-x-2 sm:gap-x-4 gap-y-3 sm:gap-y-5 mt-6">
+          {/* max-w-lg: con seis chips el ancho completo deja uno huérfano en la segunda fila */}
+          <div className="flex flex-wrap justify-center gap-x-2 sm:gap-x-4 gap-y-3 sm:gap-y-5 mt-6 max-w-lg mx-auto">
             {feeds.map((feed, i) => (
               <motion.div
                 key={feed}
@@ -241,9 +260,9 @@ export const SustratoDiagram: React.FC = () => {
           </div>
 
           <p className="text-center text-[13px] text-neutral-500 leading-relaxed mt-8 max-w-xl mx-auto">
-            Se conecta a lo que tu equipo ya usa: Slack, Drive, correo, tus bases de datos, tu ERP,
-            tus propias aplicaciones. Sobre el sustrato trabajan los agentes, las automatizaciones y
-            el software a medida.
+            Se conecta a lo que tu equipo ya usa: Slack, correo, tu CRM, tus redes sociales, tus
+            bases de datos, tu ERP, tus propias aplicaciones. Sobre el sustrato trabajan los agentes,
+            las automatizaciones y el software a medida.
           </p>
         </motion.div>
       </div>
