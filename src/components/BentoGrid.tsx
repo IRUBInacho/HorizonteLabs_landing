@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { BentoIntegrationVisual } from './visuals/BentoIntegrationVisual';
 import { BentoAutomationVisual } from './visuals/BentoAutomationVisual';
-import { BentoSpecializedAgentVisual } from './visuals/BentoSpecializedAgentVisual';
+import { BentoAgentsVisual } from './visuals/BentoAgentsVisual';
 import { BentoCustomSoftwareVisual } from './visuals/BentoCustomSoftwareVisual';
 
 const services = [
@@ -31,7 +31,7 @@ const services = [
     subtitle: 'Un agente que conoce a fondo la información de tu empresa.',
     copy: 'Implementamos un agente capaz de consultar el conocimiento de la empresa —proyectos, informes, criterios técnicos— y responder sobre él con precisión.',
     tag: 'Valor inmediato',
-    visual: <BentoSpecializedAgentVisual />,
+    visual: <BentoAgentsVisual />,
   },
   {
     id: 'desarrollo-a-medida',
