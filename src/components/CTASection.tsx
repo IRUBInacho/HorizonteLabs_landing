@@ -8,7 +8,7 @@ interface CTASectionProps {
 
 export const CTASection: React.FC<CTASectionProps> = ({ onOpenConsultation }) => {
   return (
-    <section id="contacto" className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-white border-t border-neutral-200/70 relative overflow-hidden">
+    <section id="contacto" className="py-16 sm:py-24 lg:py-32 px-6 sm:px-10 lg:px-16 bg-white border-t border-neutral-200/70 relative overflow-hidden">
       {/* Background soft subtle luxury radial gradient */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-[radial-gradient(ellipse_at_center,rgba(225,6,0,0.035),transparent_70%)] pointer-events-none" />
 

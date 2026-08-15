@@ -46,7 +46,7 @@ const services = [
 
 export const BentoGrid: React.FC = () => {
   return (
-    <section id="servicio" className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-[#FAFAFA] border-t border-neutral-200/70">
+    <section id="servicio" className="py-16 sm:py-24 lg:py-32 px-6 sm:px-10 lg:px-16 bg-[#FAFAFA] border-t border-neutral-200/70">
       <div className="max-w-7xl mx-auto">
         {/* Header Block */}
         <div className="max-w-3xl mb-16 sm:mb-24">
@@ -90,9 +90,9 @@ export const BentoGrid: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative bg-[#1A365D]/[0.03] backdrop-blur-sm rounded-2xl p-8 sm:p-12 lg:p-14 border border-[#1A365D]/10 hover:border-[#E10600]/40 hover:bg-[#1A365D]/[0.05] transition-colors duration-500 shadow-sm"
+              className="group relative bg-[#1A365D]/[0.03] backdrop-blur-sm rounded-2xl p-6 sm:p-10 lg:p-14 border border-[#1A365D]/10 hover:border-[#E10600]/40 hover:bg-[#1A365D]/[0.05] transition-colors duration-500 shadow-sm"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-14 items-center">
                 {/* Left Column: Text & Hierarchy (7 cols) */}
                 <div className="lg:col-span-6 flex flex-col justify-between">
                   {/* Top Metadata */}

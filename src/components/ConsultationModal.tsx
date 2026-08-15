@@ -79,7 +79,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-xl bg-white rounded-2xl border border-neutral-200 shadow-2xl p-6 sm:p-10 z-10 overflow-hidden"
+            className="relative w-full max-w-xl bg-white rounded-2xl border border-neutral-200 shadow-2xl p-5 sm:p-10 z-10 overflow-hidden"
           >
             {/* Close button */}
             <button

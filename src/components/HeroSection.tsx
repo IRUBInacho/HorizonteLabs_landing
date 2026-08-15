@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) => {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-between pt-32 pb-16 px-6 sm:px-10 lg:px-16 overflow-hidden bg-white">
+    <section className="relative min-h-[90vh] flex flex-col justify-between pt-28 sm:pt-32 pb-16 px-6 sm:px-10 lg:px-16 overflow-hidden bg-white">
       {/* Subtle Neural Network Particle Canvas Background */}
       <HeroNeuralCanvas />
 
@@ -32,7 +32,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl font-bold tracking-tight leading-[1.06] mb-8 text-[#111111]"
+          className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-6xl font-bold tracking-tight leading-[1.1] sm:leading-[1.06] mb-8 text-[#111111]"
         >
           Donde los agentes <span className="text-[#D92D20]">viven</span>,
           <br className="hidden sm:block" /> <span className="text-[#D92D20]">actúan</span> y{' '}
