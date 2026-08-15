@@ -7,8 +7,8 @@ const teamMembers = [
     id: 'francisco',
     name: 'Francisco Andrades Martínez',
     role: 'Senior AI & ML Engineer',
-    expertise: ['AI', 'Machine Learning', 'Data Science', 'Autonomous Agents'],
-    bio: 'Ingeniero Civil en Informática especializado en inteligencia artificial aplicada y agentes autónomos. Lidera el desarrollo de modelos predictivos, sistemas de razonamiento automatizado y arquitecturas de datos en producción. Forma a ingenieros de software senior de Latinoamérica en ML engineering y sistemas agénticos, y cuenta con investigación publicada en el área. Experiencia en startups y en programas de aceleración e inmersión hacia US.',
+    expertise: ['Agentic Systems', 'AI in Production', 'MLOps', 'Machine Learning'],
+    bio: 'Ingeniero Civil en Informática y Magíster en Ciencias de la Ingeniería Informática, mención Inteligencia Artificial. Especializado en construir y desplegar software de IA. Actualmente se desempeña como ML Engineer en ALeRCE, del Centro de Modelamiento Matemático de la Universidad de Chile, el Instituto Milenio de Astrofísica y el Centro de Datos e Inteligencia Artificial de la Universidad de Concepción. También es profesor en AnyoneAI, donde forma a ingenieros de software de Latinoamérica en la construcción de sistemas agénticos listos para producción. Tiene investigación publicada y experiencia en startups y programas de aceleración hacia Estados Unidos.',
     linkedin: 'https://www.linkedin.com/in/francisco-andrades-mart%C3%ADnez-29b6101ab/',
     image: '/team/francisco.jpeg',
     // Retrato cuadrado en contenedor panorámico: subir el encuadre evita cortar el pelo.
