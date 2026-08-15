@@ -123,11 +123,11 @@ export const SustratoDiagram: React.FC = () => {
               <motion.button
                 key={consumer.id}
                 onClick={() => setActiveConsumerId(isActive ? null : consumer.id)}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: [20, -5, 0] }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: [30, -10, 3, 0] }}
                 whileHover={{ y: -2 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 + i * 0.15, ease: 'easeOut' }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.6, delay: 0.2 + i * 0.15, ease: 'backOut' }}
                 className={`px-3 sm:px-6 pt-3 pb-4 -mb-px bg-white border border-neutral-200 border-b-0 rounded-t-xl text-[12px] sm:text-sm font-semibold shadow-[0_-4px_16px_rgba(0,0,0,0.03)] transition-all duration-300 cursor-pointer focus:outline-none flex items-center gap-2 ${
                   isActive
                     ? 'text-[#E10600] border-[#E10600] bg-[#FAFAFA] shadow-[0_-8px_20px_rgba(225,6,0,0.08)]'
@@ -157,7 +157,7 @@ export const SustratoDiagram: React.FC = () => {
                 className="overflow-hidden w-full relative z-10"
               >
                 <div className="bg-[#FAFAFA] border border-[#E10600]/30 rounded-2xl rounded-t-none mb-6 sm:mb-8 p-6 sm:p-8 shadow-[0_20px_40px_-15px_rgba(225,6,0,0.15)] relative -top-[1px]">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                     <div className="flex flex-col text-left">
                       <span className="text-[11px] font-mono-code uppercase tracking-widest text-[#E10600] font-semibold mb-3">
                         En Acción
